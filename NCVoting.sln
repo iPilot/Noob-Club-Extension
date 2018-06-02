@@ -4,21 +4,31 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DDBC361C-74FE-42BF-A5C9-BD6045B28C8A}"
-	ProjectSection(SolutionItems) = preProject
-		background.js = background.js
-		icon.png = icon.png
-		manifest.json = manifest.json
-		popup.html = popup.html
-		popup.js = popup.js
-		setVoteTimers.js = setVoteTimers.js
-	EndProjectSection
 	ProjectSection(FolderGlobals) = preProject
 		__JSONSchema = http://json.schemastore.org/webextension
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Main", "Main", "{BFB4A120-81EB-4063-B9A5-BEF8FFC51845}"
+	ProjectSection(SolutionItems) = preProject
+		Main\icon.png = Main\icon.png
+		Main\manifest.json = Main\manifest.json
+		Main\popup.html = Main\popup.html
+		Main\popup.js = Main\popup.js
+		Main\setVoteTimers.js = Main\setVoteTimers.js
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Draft", "Draft", "{A0B29CF8-69D9-4E21-AA13-A9B5E94582CF}"
+	ProjectSection(SolutionItems) = preProject
+		Draft\background.js = Draft\background.js
 	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BFB4A120-81EB-4063-B9A5-BEF8FFC51845} = {DDBC361C-74FE-42BF-A5C9-BD6045B28C8A}
+		{A0B29CF8-69D9-4E21-AA13-A9B5E94582CF} = {DDBC361C-74FE-42BF-A5C9-BD6045B28C8A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D262E182-D0F7-4469-BFAB-8496E6D0A022}
