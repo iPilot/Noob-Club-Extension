@@ -1,0 +1,23 @@
+{
+	"manifest_version": 2,
+
+	"name": "Noob-club Extension",
+	"description": "Расширение для отображения последних голосов на сайте Noob-club.ru и улучшения интерфейса плюсомета",
+	"version": "1.0",
+
+	"permissions": [
+		"storage"
+	],
+	"content_scripts": [
+		{
+			"matches": [ "*://www.noob-club.ru/index.php?topic=*" ],
+			"run_at" : "document_idle",
+			"js" : ["setVoteTimers.js"]
+		}
+	],
+	"browser_action": {
+		"default_icon": "icon.png",
+		"default_title": "NCVoting",
+		"default_popup": "popup.html"
+	}
+}

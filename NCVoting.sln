@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DDBC361C-74FE-42BF-A5C9-BD6045B28C8A}"
+	ProjectSection(SolutionItems) = preProject
+		background.js = background.js
+		icon.png = icon.png
+		manifest.json = manifest.json
+		popup.html = popup.html
+		popup.js = popup.js
+		setVoteTimers.js = setVoteTimers.js
+	EndProjectSection
+	ProjectSection(FolderGlobals) = preProject
+		__JSONSchema = http://json.schemastore.org/webextension
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D262E182-D0F7-4469-BFAB-8496E6D0A022}
+	EndGlobalSection
+EndGlobal
