@@ -1,4 +1,6 @@
-﻿function formatDate(date) {
+﻿///<reference path="jquery.min.js"/>
+
+function formatDate(date) {
 	var d = new Date(date);
 	d.setDate(d.getDate() + 3);
 	var delta = d - new Date();
@@ -46,6 +48,25 @@ function addToStorage(user_name) {
 	chrome.storage.local.set(obj);
 }
 
+function addTostorageWithMsgNum(user_name, msgNum) {
+	var now = (new Date()).toString();
+	var obj = {};
+	obj[user_name] = { date: now, msgNum: msgNum };
+	chrome.storage.local.set(obj);
+}
+
+function addToStorageVoteInfo(user_name) {
+	addToStorage(user_name + 'Vote');
+}
+
+function getMsgNum(post) {
+
+}
+
+function hideVoteButton(button, obj) {
+	
+}
+
 function processPost(post) {
 	var user_name = getPosterName(post);
 	var voting = getVotingElement(post);
@@ -54,22 +75,21 @@ function processPost(post) {
 			addToStorage(user_name);
 		};
 		chrome.storage.local.get(user_name, function (obj) {
-			for (f in obj) {
+			if (!$.isEmptyObject(obj))
 				voting.style.visibility = "hidden";
-			}
 		});
 	}
 	else {
 	}
 }
 
-function process(elementClass) {
-	var posts = document.getElementsByClassName(elementClass);
+function processPosts(postClass) {
+	var posts = document.getElementsByClassName(postClass);
 	for (var i = 0; i < posts.length; i++) {
-		processPost(posts, i);
+		processPost(posts[i]);
 	}
 }
 
-process("windowbg");
-process("windowbg2");
-process("i_am_good windowbg");
+processPosts("windowbg");
+processPosts("windowbg2");
+processPosts("i_am_good windowbg");

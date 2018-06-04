@@ -4,6 +4,7 @@
 	"name": "Noob-club Extension",
 	"description": "Расширение для отображения последних голосов на сайте Noob-club.ru и улучшения интерфейса плюсомета",
 	"version": "1.1",
+	"author": "iPilot",
 
 	"permissions": [
 		"storage"
@@ -12,12 +13,13 @@
 		{
 			"matches": [ "*://www.noob-club.ru/index.php?topic=*" ],
 			"run_at" : "document_idle",
-			"js": [ "jquery.min.js", "beautyfyNCpage.js" ]
+			"js": [ "jquery.min.js", "beautifyNCtopic.js" ]
 		}
 	],
 	"browser_action": {
 		"default_icon": "icon.png",
 		"default_title": "NCVoting",
 		"default_popup": "popup.html"
-	}
+	},
+	"options_page": "options.html" 
 }

@@ -1,6 +1,7 @@
+///<reference path="jquery.min.js"/>
 //chrome.storage.local.clear();
 
-var MAX_LINES = 10;
+var MAX_LINES = 25;
 
 chrome.storage.local.get(null, function (result) {
 	var votes = "";
