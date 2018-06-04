@@ -21,16 +21,18 @@ chrome.storage.local.get(null, function (result) {
 			return 1;
 		return 0;
     });
-    var len = Math.min(MAX_LINES, v.length);
+	var len = Math.min(MAX_LINES, v.length);
+	var place = document.getElementsByClassName("votes")[0];
 	for (var i = 0; i < len; i++)
 	{
+		
 		var line = "<div class=\"vote_line\">";
 		line += "<div class=\"name\">" + v[i].name + "</div>";
 		line += "<div class=\"date\">" + formatDate(v[i].date) + "</div></div>";
 		votes += line;
 	}
 	votes += "</div>";
-	document.getElementsByClassName("votes")[0].innerHTML = votes;
+	place.innerHTML = votes;
 });
 
 function formatDate(date) {
