@@ -3,7 +3,7 @@
 
 	"name": "Noob-club Extension",
 	"description": "Расширение для отображения последних голосов на сайте Noob-club.ru и улучшения интерфейса плюсомета",
-	"version": "1.0",
+	"version": "1.1",
 
 	"permissions": [
 		"storage"
@@ -12,7 +12,7 @@
 		{
 			"matches": [ "*://www.noob-club.ru/index.php?topic=*" ],
 			"run_at" : "document_idle",
-			"js" : ["setVoteTimers.js"]
+			"js": [ "jquery.min.js", "beautyfyNCpage.js" ]
 		}
 	],
 	"browser_action": {

@@ -30,16 +30,28 @@ chrome.storage.local.get(null, function (items) {
 	}
 });
 
-function processPost(posts, index) {
-	var user = posts[index].getElementsByClassName("poster");
-	var user_name = user[0].getElementsByTagName("a")[0].firstChild.textContent;
-	var voting = posts[index].getElementsByClassName("message_voting")[0].children[0];
+function getPosterName(post) {
+	var user = post.getElementsByClassName("poster");
+	return user[0].getElementsByTagName("a")[0].firstChild.textContent
+}
+
+function getVotingElement(post) {
+	return post.getElementsByClassName("message_voting")[0].children[0]
+}
+
+function addToStorage(user_name) {
+	var now = (new Date()).toString();
+	var obj = {};
+	obj[user_name] = now;
+	chrome.storage.local.set(obj);
+}
+
+function processPost(post) {
+	var user_name = getPosterName(post);
+	var voting = getVotingElement(post);
 	if (voting.className == "vote_message vote_plus") {
 		voting.onclick = function () {
-			var now = (new Date()).toString();
-			var obj = {};
-			obj[user_name] = now;
-			chrome.storage.local.set(obj);
+			addToStorage(user_name);
 		};
 		chrome.storage.local.get(user_name, function (obj) {
 			for (f in obj) {
