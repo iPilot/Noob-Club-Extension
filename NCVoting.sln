@@ -12,8 +12,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Main", "Main", "{BFB4A120-8
 	ProjectSection(SolutionItems) = preProject
 		Main\beautifyNCtopic.js = Main\beautifyNCtopic.js
 		Main\icon.png = Main\icon.png
+		Main\jquery.js = Main\jquery.js
+		Main\jquery.min.js = Main\jquery.min.js
 		Main\manifest.json = Main\manifest.json
 		Main\options.html = Main\options.html
+		Main\options.js = Main\options.js
 		Main\popup.html = Main\popup.html
 		Main\popup.js = Main\popup.js
 	EndProjectSection

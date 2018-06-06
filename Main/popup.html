@@ -1,7 +1,6 @@
 ﻿<html>
 	<head>
 	<title>Последние голоса</title>
-		<script type="text/javascript" scr="jquery.js"></script>
 		<style type="text/css">
 			.votes { width: 250px; text-align: center; }
 			.nameEven {
@@ -18,11 +17,16 @@
 			.date { width: 40%; background: #ddd; text-align: right; display: inline-block; font-family: Verdana; }
 			.vote_line { display: flex; }
 			.votes_title { text-align: center; }
+			.user {
+				text-align: center;
+				width: 250px;
+			}
 		</style>
 	</head>
 	<body>
-		<div class="votes_title"><h4>Недавние плюсы:</h4></div>
+		<div class="user" id="user_name"></div><div class="votes_title"><h4>Недавние плюсы:</h4></div>
 		<div class="votes"></div>
+		<script type="text/javascript" src="jquery.min.js"></script>
 		<script type="text/javascript" src="popup.js"></script>
 	</body>
 </html>
